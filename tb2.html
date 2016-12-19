@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>淘宝网-我的购物车</title>
+<style>
+
+* {
+margin: 0px;
+padding: 0px;
+}
+body{font-family:Hiragino Sans GB;line-height:35px;font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;}
+a{text-decoration:none;}
+p{color:black;text-decoration:none;height:35px;font-size:12px;display:inline-block;}
+.Nav{background:#F5F5F5;line-height:35px;}
+.header{width:1190px;height:36px;margin: 0px 356.5px;}
+.header p{color:#6C6C6C;}
+.leftheader{width:274px;display:inline-block;height:35px;}
+.leftheader p{display:inline-block;position:relative;top:0px;}
+.rightheader{float:right;width:720px;}
+.nav{height:35px;}
+.header p:hover{color:#FF7F00;background-color:white }
+.nav>li>ul>li p:hover{color:#6C6C6C;background-color:#F5F5F5;}
+.nav ul:hover{background-color:white;}
+em{font-style:normal;}
+
+.nav>ul{position:relative;top:0px;width:80px;}
+.nav>li>ul{display:none;position:absolute;padding:0px;}
+.nav>li{display:inline-block;width:80px;}
+.nav>li>ul>li{display:block;}
+.nav li{height:35px;}
+.one {color:#F22E00;}
+.nav>li>ul>li{width:80px;height:36px;}
+
+.content{width:1190px;height:1455px;margin: 0px 356.5px;}
+
+.header-two{height:35px;width:1190px;margin:0 auto;position:relative;padding:20px 0px 40px;}
+.headlogo{height:46px;width:181px;background-image:url(./img/logo.png);position:absolute;}
+.search{width:515px;height:35px;position:relative;display:inline-block;}
+
+.switch{width:1190px;height:33px;display:inline-block;}
+.switcha{display:inline-block;font-size:16px;}
+.allitems{color:#f40;width:124px;height:31px;}
+.onsale{width:134px;height:31px;}
+.indanger{width:133px;height:31px;}
+.switcha li{display:inline-block;font-weight:700;}
+.sumone{width:217px;height:25px;display:inline-block;float:right;}
+.pricesum{color:#f40;}
+.sumonesubmit{background-color:#aaa;width:55px;height:25px;}
+.sumonesubmit p{color:white;}
+
+.cart{width:1190px;height:862px;display:inline-block;}
+.cart-item{width:1190px;height:712px;}
+
+.inner{height:50px;width:1190px;}
+.shop-infoone{width:1190px;height:38px;}
+.item-infoone{width:1190px;height:121px;background-color:#fcfcfc;padding:20px 0px 0px 0px;}
+.item-infoone img{display:inline-block;max-width: 80px;max-height: 80px;}
+.td-td{width:1188px;height:119px;}
+.td-td>li{display:inline-block;position:relative;float:left;overflow:hidden;}
+.float{width:1190px;height:50px;}
+.td-label{width:50px;height:119px;}
+.td-item{width:342px;height:119px;overflow:hidden;}
+.td-img{overflow:hidden;}
+.imgx{width:80px;height:80px;display:inline-block;}
+.makepoint{width:226px;height:36px;}
+.itemtitle{display:block;color:black;}
+.td-xxx{width:252px;height:119px;}
+.td-xxx p{color:#9c9c9c;}
+.td-price{width:130px;height:119px;}
+.td-amount{width:120px;height:119px;}
+.td-sumprice{width:140px;height:119px;color:#f40;font-weight:700;}
+.td-op{width:149px;height:119px;}
+
+.interests{width:1190px;height:448px;}
+
+.footer{position:relative;bottom:40px;}
+.footer a{color:#6C6C6C;}
+.footer-bd{position:relative;bottom:20px;}
+.footer-bd a,b{color:#6C6C6C;}
+</style>
+</head>
+<body>
+<div class="Nav">
+<div class="header">
+<div class="leftheader">
+<a href="#"><p>kkkkkenneth</p></a>
+<a href="#"><img src="./img/1.png" a href="#" ><img src=./img/a.png></a>
+<img src="./img/2.png"><p>消息</p> 
+<a href="#"><p>手机逛淘宝</p></a>
+</div>
+  <div class="rightheader">
+ 
+<ul class="nav" > 
+<li>
+ <p class="one">淘宝网首页</p> 
+ </li>
+<li onmouseover="displaysubmenu(this)" onmouseout="hidesubmenu(this)">
+
+<a href="#"><p>我的淘宝</p></a>
+ 
+<ul> 
+<li><a href="#"><p>已买到的宝贝</p></a></li> 
+<li><a href="#"><p>足迹</p></a></li> 
+<li><a href="#"><p>爱逛街</p></a></li> 
+<li><a href="#"><p>淘宝达人</p></a></li> 
+<li><a href="#"><p>新欢</p></a></li> 
+</ul>
+
+</li>
+<li>
+<a href="#"><p><img src="./img/3.png">购物车</p></a>
+</li>
+<li onmouseover="displaysubmenu(this)" onmouseout="hidesubmenu(this)">
+<a href="#"><p><img src="./img/4.png">收藏夹<img src=./img/a.png></p></a>
+<ul>
+<li><a href="#"><p>收藏的宝贝</p></a></li>
+<li><a href="#"><p>收藏的店铺</p></a></li>
+</ul>
+</li>
+<li>
+<a href="#"><p>商品分类</p></a>
+</li>
+<li onmouseover="displaysubmenu(this)" onmouseout="hidesubmenu(this)">
+<a href="#"><p>卖家中心<img src=./img/a.png></p></a>
+<ul>
+<li><a href="#"><p>免费开店</p></a></li>
+<li><a href="#"><p>已卖出的宝贝</p></a></li>
+<li><a href="#"><p>出售中的宝贝</p></a></li>
+<li><a href="#"><p>卖家服务市场</p></a></li>
+<li><a href="#"><p>卖家培训中心</p></a></li>
+</ul>
+</li>
+<li onmouseover="displaysubmenu(this)" onmouseout="hidesubmenu(this)">
+<a href="#"><p>联系客服<img src=./img/a.png></p></a>
+<ul>
+<li><a href="#"><p>消费者客服</p></a></li>
+<li><a href="#"><p>卖家客服</p></a></li>
+</ul>
+</li>
+<li onmouseover="displaysubmenu(this)" onmouseout="hidesubmenu(this)">
+<a href="#"><p><img src=./img/c.png>网站导航<img src=./img/b.png></p></a>
+<ul></ul>
+</li>
+</ul> 
+</div>
+</div>
+</div>
+<div class="content">
+<div class="header-two">
+<div class="tblogo">
+<a href="#">
+<span class="headlogo">
+</span>
+</a>
+</div>
+<div class="search">
+
+</div>
+</div>
+   <div class="cart">
+ <div class="switch">
+<ul class="switcha">
+<li class="allitems">
+<em>全部商品</em>
+</li>
+<li class="onsale">
+<em>降价商品</em>
+</li>
+<li class="indanger">
+<em>库存紧张</em>
+</li>
+</ul>
+<div class=sumone>
+<span>
+<p>已选商品（不含运费）</p>
+<strong class="pricesum">
+0.0
+</strong>
+<a href="#" class="sumonesubmit">
+<p>结&nbsp算</p>
+</a>
+ 
+</span>
+</div>
+ </div>
+
+ <div class="inner">
+   <div class="selectall">
+   <div class="checkbox">
+   
+
+   </div>
+   </div>
+   <div class="td-inner">
+   </div>
+   <div class="td-inner">
+   </div>
+   <div class="td-inner">
+   </div>
+   <div class="td-inner">
+   </div>
+   <div class="td-inner">
+   </div>
+
+
+ </div>
+ <div class="cart-itemone">
+<div class="shop-infoone">
+</div>
+<div class="item-infoone">
+<ul class="td-td">
+<li class="td-label">
+<label>
+</label>
+</li>
+<li class="td-item">
+<div class="td-img">
+<div class="imgx">
+<img src="./img/itemone.jpg">
+
+</div>
+
+<div class="makepoint">
+<a href="#" class="itemtitle">
+进口蕊风空气清新剂车用清香剂浴室厕所香薰除臭固体精油款芳香剂
+</a>
+</div>
+</div>
+</li>
+<li class="td-xxx">
+<p>颜色分类：快乐时光（西柚和佛手柑）</p>
+
+</li>
+<li class="td-price">
+<p>￥66.00
+<br/>
+￥33.00
+
+</p>
+</li>
+<li class="td-amount">
+1
+</li>
+<li class="td-sumprice">
+<em>
+￥33.00
+</em>
+</li>
+<li class="td-op">
+<p>
+移入收藏夹
+<br/>
+删除
+</p>
+
+</li>
+</ul>
+</div>
+<div class="shop-infoone">
+</div>
+<div class="item-infoone">
+<ul class="td-td">
+<li class="td-label">
+<label>
+</label>
+</li>
+<li class="td-item">
+<div class="td-img">
+<div class="imgx">
+<img src="./img/itemtwo.jpg">
+
+</div>
+
+<div class="makepoint">
+<a href="#" class="itemtitle">
+【现货】日本正版 名侦探柯南 20周年纪念 防辐射 眼镜
+</a>
+</div>
+</div>
+</li>
+<li class="td-xxx">
+<p>大小：现货</p>
+<br/>
+<p>颜色分类：透明镜片</p>
+
+</li>
+<li class="td-price">
+<p>￥66.00
+<br/>
+￥33.00
+
+</p>
+</li>
+<li class="td-amount">
+1
+</li>
+<li class="td-sumprice">
+<em>
+￥33.00
+</em>
+</li>
+<li class="td-op">
+<p>
+移入收藏夹
+<br/>
+删除
+</p>
+
+</li>
+</ul>
+</div>
+<div dsh="smartFloat">往上滚动，看我会怎样。</div>
+ </div>
+<div class="interests">
+</div>
+</div>
+
+
+
+<div class="footer">
+<p>
+      <a href="http://www.alibabagroup.com/cn/global/home">阿里巴巴集团</a>
+      <b>|</b>
+      <a href="//www.taobao.com">淘宝网</a>
+      <b>|</b>
+      <a href="//www.tmall.com">天猫</a>
+      <b>|</b>
+      <a href="//ju.taobao.com">聚划算</a>
+      <b>|</b>
+      <a href="http://www.aliexpress.com">全球速卖通</a>
+      <b>|</b>
+      <a href="http://www.alibaba.com/">阿里巴巴国际交易市场</a>
+      <b>|</b>
+      <a href="http://www.1688.com">1688</a>
+      <b>|</b>
+      <a href="http://www.alimama.com">阿里妈妈</a>
+      <b>|</b>
+      <a href="//www.alitrip.com">阿里旅行 · 去啊</a>
+      <b>|</b>
+      <a href="http://www.aliyun.com">阿里云计算</a>
+      <b>|</b>
+      <a href="http://www.yunos.com">YunOS</a>
+      <b>|</b>
+      <a href="http://www.aliqin.cn/">阿里通信</a>
+      <b>|</b>
+      <a href="http://www.etao.com/">一淘</a>
+      <b>|</b>
+      <a href="http://www.net.cn">万网</a>
+      <b>|</b>
+      <a href="http://www.autonavi.com/">高德</a>
+      <b>|</b>
+      <a href="http://www.uc.cn/">UC</a>
+      <b>|</b>
+      <a href="http://www.umeng.com/">友盟</a>
+      <br>
+      <a href="http://www.xiami.com">虾米</a>
+      <b>|</b>
+      <a href="http://www.ttpod.com/">天天动听</a>
+      <b>|</b>
+      <a href="http://www.laiwang.com/">来往</a>
+      <b>|</b>
+      <a href="http://www.dingtalk.com/?lwfrom=20150130160830727">钉钉</a>
+      <b>|</b>
+      <a href="https://www.alipay.com">支付宝</a>
+    </p>
+    </div>
+    <div class="footer-bd">
+    <p>
+      <a href="//www.taobao.com/about">关于淘宝</a>
+      <a href="//www.taobao.com/about/partners.php">合作伙伴</a>
+      <a href="//pro.taobao.com">营销中心</a>
+      <a href="http://jubao.alibaba.com" >廉正举报</a>
+      <a href="//service.taobao.com/support/main/service_route.htm">联系客服</a>
+      <a href="//open.taobao.com">开放平台</a>
+      <a href="//www.taobao.com/about/join.php">诚征英才</a>
+      <a href="//www.taobao.com/about/contact.php">联系我们</a>
+      <a href="//www.taobao.com/sitemap.php">网站地图</a>
+      <a href="//www.taobao.com/go/chn/tb-fp/2014/law.php">法律声明</a>
+      <em>© 2003-2016 Taobao.com 版权所有</em>
+    </p>
+    <div class="biu">
+      <span>网络文化经营许可证：<a href="//img.alicdn.com/tps/i2/TB1YFcPLpXXXXaiXFXXcaDpFFXX-803-473.png">浙网文[2013]0268-027号</a></span>
+      <b>|</b>
+      <span>增值电信业务经营许可证：<a href="http://zcainfo.miitbeian.gov.cn/state/outPortal/loginPortal.action">浙B2-20080224-1</a></div>
+      <b>|</b>
+      <span>信息网络传播视听节目许可证：1109364号</span>
+      <b>|</b>
+      <span> 互联网违法和不良信息举报电话:0571-81683755 blxx@list.alibaba-inc.com </span>
+    
+  </div>
+  <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js">
+</script>
+<script type="text/javascript"> 
+function displaysubmenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display="block"; 
+
+} 
+function hidesubmenu(li) { 
+var subMenu = li.getElementsByTagName("ul")[0]; 
+subMenu.style.display="none"; 
+} 
+</script> 
+<script>
+$('div,p,li,span...').smartFloat();
+</script>
+</body>
+</html>
